@@ -1,135 +1,145 @@
-# CivicConnect
+# CivicConnect — Community Reporting Frontend
 
-CivicConnect is a community reporting and civic engagement web app built with React, Vite and Firebase. It helps citizens report local issues, browse local reports, view leaderboards and announcements, and provides admin/manager dashboards for moderation and statistics.
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Frontend](https://img.shields.io/badge/Stack-React%20%7C%20Vite-blue.svg)](#)
+[![Firebase](https://img.shields.io/badge/Backend-Firebase-yellow.svg)](#)
 
----
+[![Live Demo](https://img.shields.io/badge/Live-Demo-View%20Site-brightgreen?style=for-the-badge)](https://your-live-site.example.com) [![Get Started](https://img.shields.io/badge/Get%20Started-Local%20Dev-blue?style=for-the-badge)](#getting-started) [![Contribute](https://img.shields.io/badge/Contribute-PRs%20Welcome-orange?style=for-the-badge)](#contributing)
 
-## Key Features
-
-- Report issues with photos and details
-- Citizen dashboard: view and manage your reports
-- Local reports feed (by district/upazila)
-- Manager/Admin dashboards: reports moderation, stats, users, announcements
-- Announcement board and community impact pages
-- Authentication with Firebase
+Modern, responsive frontend for CivicConnect — a civic engagement platform that lets citizens report local issues, browse and manage local reports, and helps managers/admins moderate and analyze reports.
 
 ---
 
-## Tech Stack
+Features
 
-- Frontend: React (JSX) with Vite
-- Hosting / Backend: Firebase (Auth, Firestore, Storage, Hosting)
-- Styling: CSS (project styles in `src/`)
-
----
-
-## Repo Structure (important files/folders)
-
-- `src/` — main source folder
-  - `Components/` — UI components and pages (Admin, Citizen, Manager, Dashboard)
-  - `Provider/` — `AuthProvider.jsx`, auth and route helpers
-  - `Hook/` — custom hooks
-  - `main.jsx`, `App.jsx`, `Routes.jsx` — app entry and routing
-- `public/` — public assets and JSON data (`distric.json`, `upzila.json`)
-- `vite.config.js` — Vite config
-- `firebase.json`, `firebase.config.js` — Firebase configuration and hosting
+- Beautiful, responsive UI built with React and Vite
+- Authentication powered by Firebase Auth
+- Reports with photos, location (district/upazila), and status
+- Role-based dashboards (Citizen, Manager, Admin)
+- Announcement board and leaderboards for community engagement
 
 ---
 
-## Getting Started
+Demo Screenshot
+
+![CivicConnect Screenshot](public/screenshot.png)
+
+*(Replace `public/screenshot.png` with a real screenshot for best effect.)*
+
+---
+
+Getting Started
 
 Prerequisites
 
-- Node.js (16+ recommended) and npm or yarn
-- A Firebase project (for Auth, Firestore, Storage, Hosting)
+- Node.js 16+ and npm or yarn
+- A Firebase project (Auth, Firestore, Storage, Hosting)
 
-Quick local setup
-
-1. Install dependencies
+Quick start
 
 ```bash
+# install deps
 npm install
-# or
-# yarn
-```
 
-2. Add Firebase config
-
- - Copy your Firebase config into `firebase.config.js` or provide the appropriate environment variables. If you use Vite env vars, prefix them with `VITE_` and reference them from `src` code.
-
-3. Run the dev server
-
-```bash
+# run dev server
 npm run dev
-# or
-# yarn dev
+
+# build for production
+npm run build
+# preview build locally
+npm run preview
 ```
 
-4. Build for production
+Configuration
 
-```bash
-npm run build
-npm run preview
+- This repo supports two approaches for Firebase config:
+	- Add your Firebase config to `firebase.config.js` at the project root.
+	- OR use Vite environment variables prefixed with `VITE_` (recommended for CI).
+
+
+Environment variables example (use `.env.local` or CI secrets):
+
+```env
+VITE_FIREBASE_API_KEY=your_api_key
+VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
+VITE_FIREBASE_PROJECT_ID=your_project_id
+VITE_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
+VITE_FIREBASE_MESSAGING_SENDER_ID=...
+VITE_FIREBASE_APP_ID=...
 ```
 
 ---
 
-## Firebase / Deployment notes
+Firebase deployment
 
-- This project comes with `firebase.json` and `firebase.config.js` prepared. To deploy using Firebase Hosting:
+This project includes `firebase.json` and a `firebase.config.js` helper. To deploy:
 
 ```bash
-# login and init if needed
 firebase login
 firebase deploy --only hosting
 ```
 
-Adjust Firestore rules, Storage rules and any environment secrets before deploying.
+Adjust Firestore and Storage rules before deploying to production.
 
 ---
 
-## Environment variables
+Project structure (high level)
 
-- If you use environment variables instead of `firebase.config.js`, follow Vite conventions and prefix variables with `VITE_` (e.g., `VITE_FIREBASE_API_KEY`). Do not commit secret keys to version control.
-
----
-
-## Contributing
-
-- Open an issue for bugs or feature requests
-- Create a branch, make changes, and open a pull request
-- Keep changes small and focused; follow the existing code style
-
----
-
-## Testing & Linting
-
-This repo does not include test scripts by default. You can add unit/integration tests (Jest, React Testing Library) and linters (ESLint, Prettier) as needed.
+- `src/` — application source
+	- `Components/` — UI components separated by domain (Admin, Citizen, Manager, Dashboard)
+	- `Provider/` — authentication provider and route guards (`AuthProvider.jsx`, `PrivateRoute.jsx`)
+	- `Hook/` — custom hooks (e.g., `UseAxiosSecure.jsx`)
+	- `Pages/` — top-level pages and layout components
+- `public/` — static assets and JSON lookup files (`distric.json`, `upzila.json`)
+- `vite.config.js` — build config
+- `firebase.config.js` + `firebase.json` — Firebase setup
 
 ---
 
-## License
+Design & UX notes
 
-This project is provided under the MIT License. Update the license section if you need a different license.
+- Keep components modular and accessible (ARIA where appropriate)
+- Use the `public/distric.json` and `public/upzila.json` for location lookups
+- Screens and flows are organized by role — follow folder separation when adding features
 
 ---
 
-## Contact
+Contributing
 
-If you'd like help customizing this README or adding CI, tests, or deployment scripts, tell me what you'd like changed and I will update it.
-# React + Vite
+Want to help? Great!
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1. Fork the repo and create a feature branch: `git checkout -b feat/your-feature`
+2. Commit changes with clear messages and open a PR
+3. Keep PRs focused and small; reference related issues
 
-Currently, two official plugins are available:
+Please open issues for bugs or feature requests before implementing large changes.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+Notes & TODOs
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Add CI (GitHub Actions) for linting and tests
+- Add unit & integration tests (Jest + React Testing Library)
+- Replace placeholder demo link and screenshot with live assets
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+**Contact**
+
+Need to get in touch? Choose an option below — we're happy to help with integration, deployment, screenshots, or contributions.
+
+[![Email](https://img.shields.io/badge/Email-contact%40example.com-blue?style=for-the-badge&logo=mail.sh)](mailto:contact@example.com) [![Report Bug](https://img.shields.io/badge/Report%20Bug-Issues-red?style=for-the-badge&logo=github)](https://github.com/your-username/your-repo/issues) [![Discuss](https://img.shields.io/badge/Discussion-Community-purple?style=for-the-badge&logo=discourse)](#)
+
+
+- **General / Support:** [contact@example.com](mailto:contact@example.com)
+- **Report a bug / Feature request:** Open an issue: [Create Issue](https://github.com/your-username/your-repo/issues/new)
+- **Documentation / Press / Partnerships:** [press@example.com](mailto:press@example.com)
+- **Join the community:** [Discord / Slack / Discussions link](#)
+
+Maintainers
+
+- **Your Name** — Project lead — [your-profile](https://github.com/your-username)
+
+
+
