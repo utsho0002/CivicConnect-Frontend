@@ -4,7 +4,7 @@
 [![Frontend](https://img.shields.io/badge/Stack-React%20%7C%20Vite-blue.svg)](#)
 [![Firebase](https://img.shields.io/badge/Backend-Firebase-yellow.svg)](#)
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-View%20Site-brightgreen?style=for-the-badge)](https://your-live-site.example.com) [![Get Started](https://img.shields.io/badge/Get%20Started-Local%20Dev-blue?style=for-the-badge)](#getting-started) [![Contribute](https://img.shields.io/badge/Contribute-PRs%20Welcome-orange?style=for-the-badge)](#contributing)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-View%20Site-brightgreen?style=for-the-badge)](https://civicconnect-e8797.web.app) [![Get Started](https://img.shields.io/badge/Get%20Started-Local%20Dev-blue?style=for-the-badge)](#getting-started) [![Contribute](https://img.shields.io/badge/Contribute-PRs%20Welcome-orange?style=for-the-badge)](#contributing)
 
 Modern, responsive frontend for CivicConnect — a civic engagement platform that lets citizens report local issues, browse and manage local reports, and helps managers/admins moderate and analyze reports.
 
