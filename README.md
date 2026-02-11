@@ -4,13 +4,13 @@
 [![Frontend](https://img.shields.io/badge/Stack-React%20%7C%20Vite-blue.svg)](#)
 [![Firebase](https://img.shields.io/badge/Backend-Firebase-yellow.svg)](#)
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-View%20Site-brightgreen?style=for-the-badge)](https://civicconnect-e8797.web.app) [![Get Started](https://img.shields.io/badge/Get%20Started-Local%20Dev-blue?style=for-the-badge)](#getting-started) [![Contribute](https://img.shields.io/badge/Contribute-PRs%20Welcome-orange?style=for-the-badge)](#contributing)
+[![Live_demo](https://img.shields.io/badge/Live-Demo-View%20Site-brightgreen?style=for-the-badge)](https://civicconnect-e8797.web.app) 
 
 Modern, responsive frontend for CivicConnect — a civic engagement platform that lets citizens report local issues, browse and manage local reports, and helps managers/admins moderate and analyze reports.
 
 ---
 
-Features
+# Features
 
 - Beautiful, responsive UI built with React and Vite
 - Authentication powered by Firebase Auth
@@ -20,15 +20,17 @@ Features
 
 ---
 
-Demo Screenshot
+# Demo Screenshot
 
-![CivicConnect Screenshot](public/screenshot.png)
+- Screenshot of Admin Dashboard
+  
+![CivicConnect Screenshot](https://github.com/utsho0002/CivicConnect-Frontend/blob/main/Screenshot%202026-02-11%20114356.png?raw=true)
 
-*(Replace `public/screenshot.png` with a real screenshot for best effect.)*
+
 
 ---
 
-Getting Started
+# Getting Started
 
 Prerequisites
 
@@ -129,17 +131,14 @@ Notes & TODOs
 
 Need to get in touch? Choose an option below — we're happy to help with integration, deployment, screenshots, or contributions.
 
-[![Email](https://img.shields.io/badge/Email-contact%40example.com-blue?style=for-the-badge&logo=mail.sh)](mailto:contact@example.com) [![Report Bug](https://img.shields.io/badge/Report%20Bug-Issues-red?style=for-the-badge&logo=github)](https://github.com/your-username/your-repo/issues) [![Discuss](https://img.shields.io/badge/Discussion-Community-purple?style=for-the-badge&logo=discourse)](#)
+[![Email](https://img.shields.io/badge/Email-contact%40example.com-blue?style=for-the-badge&logo=mail.sh)](mailto:utshopaul0002@gmail.com)
 
 
-- **General / Support:** [contact@example.com](mailto:contact@example.com)
-- **Report a bug / Feature request:** Open an issue: [Create Issue](https://github.com/your-username/your-repo/issues/new)
-- **Documentation / Press / Partnerships:** [press@example.com](mailto:press@example.com)
-- **Join the community:** [Discord / Slack / Discussions link](#)
+- **General / Support:** [utshopaul0002@gmail.com](mailto:utshopaul0002@gmail.com)
 
 Maintainers
 
-- **Your Name** — Project lead — [your-profile](https://github.com/your-username)
+- **Utsho Paul** — Project lead — [My-profile](https://github.com/utsho0002)
 
 
 
